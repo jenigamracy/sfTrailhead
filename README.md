@@ -4,12 +4,21 @@ This repository contains the majority of the work I had to do when
 working through the modules on the Salesforce Trailhead.
 
 This is for reference only, just so I have something to refer to in case I 
-need to re-do any module work in the future.
+need to re-do any module-work in the future.
 
-/modules contains the work done in modules as well as their challenges, if applicable. 
+# modules/
+This folder contains the work done in modules as well as their challenges, if applicable. 
 
-/playgrounds contains the work in the modules as well as the challenges.
-The files do not apply to a particular module, but serves as a backup if
-I want examples in the future.
+# playgrounds/
+This folder contains the work in the modules as well as their challenges.
+The files apply more to a trail than a module, though I've had to create
+new playgrounds halfway through trails to avoid issues between modules.
 
-This does not include work completed for superbadges.
+Summary of contents in playgrounds/
+- adminTrack/ - a few modules tackled in [the Admin Credential Trailmix](https://trailhead.salesforce.com/users/strailhead/trailmixes/prepare-for-your-salesforce-administrator-credential)
+- devBeginner/ - a few modules tackled in [the Developer Beginner Trail](https://trailhead.salesforce.com/content/learn/trails/force_com_dev_beginner)
+- devBeginner2/ - some of the latter modules in the Developer Beginner Trail
+- devIntermediate/ - some of the modules in [the Developer Intermediate Trail](https://trailhead.salesforce.com/content/learn/trails/force_com_dev_intermediate)
+
+# superbadges
+This repository does not include work completed for superbadges.
