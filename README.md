@@ -20,5 +20,11 @@ Summary of contents in playgrounds/
 - devBeginner2/ - some of the latter modules in the Developer Beginner Trail
 - devIntermediate/ - some of the modules in [the Developer Intermediate Trail](https://trailhead.salesforce.com/content/learn/trails/force_com_dev_intermediate)
 
+# projects/
+This folder contains work in projects found in Trailhead
+
+Summary of contents in projects/
+- [findAndFixBugsInApexReplayDebugger](https://trailhead.salesforce.com/content/learn/projects/find-and-fix-bugs-with-apex-replay-debugger)
+
 # superbadges
 This repository does not include work completed for superbadges.
