@@ -10,6 +10,7 @@ need to re-do any module-work in the future.
 This folder contains the work done in modules as well as their challenges, if applicable. 
 
 Contents in modules/
+- [jsSkills4SfDevs](https://trailhead.salesforce.com/content/learn/modules/javascript-essentials-salesforce-developers)
 - [orgDevelopmentModel/](https://trailhead.salesforce.com/content/learn/modules/org-development-model)
 
 # playgrounds/
