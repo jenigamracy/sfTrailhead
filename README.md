@@ -12,12 +12,12 @@ This folder contains the work done in modules as well as their challenges, if ap
 # playgrounds/
 This folder contains the work in the modules as well as their challenges.
 The files apply more to a trail than a module, though I've had to create
-new playgrounds halfway through trails to avoid issues between modules.
+new playgrounds at some point through trails to avoid issues between modules.
 
 Summary of contents in playgrounds/
 - adminTrack/ - a few modules tackled in [the Admin Credential Trailmix](https://trailhead.salesforce.com/users/strailhead/trailmixes/prepare-for-your-salesforce-administrator-credential)
 - devBeginner/ - a few modules tackled in [the Developer Beginner Trail](https://trailhead.salesforce.com/content/learn/trails/force_com_dev_beginner)
-- devBeginner2/ - some of the latter modules in the Developer Beginner Trail
+- devBeginner2/ - some of the latter modules in [the Developer Beginner Trail](https://trailhead.salesforce.com/content/learn/trails/force_com_dev_beginner)
 - devIntermediate/ - some of the modules in [the Developer Intermediate Trail](https://trailhead.salesforce.com/content/learn/trails/force_com_dev_intermediate)
 
 # projects/
