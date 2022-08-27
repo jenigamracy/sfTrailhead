@@ -1,0 +1,19 @@
+public class ContactAndLeadSearch {
+    public static List<List<sObject>> searchContactsAndLeads(String firstOrLastName) {
+        List<List<sObject>> results = [FIND :firstOrLastName IN ALL FIELDS
+                                       RETURNING Contact(Name), Lead(Name)];
+        
+        Contact[] contacts = (Contact[])results[0];
+        Lead[] leads = (Lead[])results[1];
+        
+        for (Contact c : contacts) {
+            System.debug(c.Name);
+        }
+        
+        for (Lead l : leads) {
+            System.debug(l.Name);
+        }
+        
+        return results;
+    }
+}

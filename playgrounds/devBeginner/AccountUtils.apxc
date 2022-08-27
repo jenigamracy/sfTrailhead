@@ -1,0 +1,10 @@
+public with sharing class AccountUtils {
+    // Public method
+    public static List<Account> accountsByState(String billingState) {
+        List<Account> myAccounts = [SELECT Id, Name FROM Account WHERE BillingState = :billingState];
+        
+        System.debug('Hello, myAccounts[0].Name is ' + myAccounts[0].Name);
+        
+        return myAccounts;
+    }
+}

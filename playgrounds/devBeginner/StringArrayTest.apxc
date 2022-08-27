@@ -1,0 +1,11 @@
+public class StringArrayTest {
+    public static List<String> generateStringArray(Integer size) {
+        List<String> items = new List<String>();
+        
+        for (Integer i = 0; i < size; i++) {
+            items.add('Test ' + i);
+        }
+        
+        return items;
+    }
+}

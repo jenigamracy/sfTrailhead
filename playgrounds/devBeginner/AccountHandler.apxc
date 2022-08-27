@@ -1,0 +1,14 @@
+public class AccountHandler {
+    public static Account insertNewAccount(String name) {
+        Account newAccount;
+        try {
+        	newAccount = new Account(Name = name);
+        	insert newAccount;
+        } catch (DMLException e) {
+            newAccount = null;
+            System.debug('A DML exception has occurred: ' + e.getMessage());
+        }
+        
+        return newAccount;
+    }
+}
