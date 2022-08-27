@@ -1,0 +1,16 @@
+@isTest
+private class VerifyDateTest {
+    @isTest static void testWithinThirtyDays() {
+        Date d1 = Date.newInstance(2022, 10, 1);
+        Date d2 = Date.newInstance(2022, 10, 5);
+        
+        System.assertEquals(d2, VerifyDate.CheckDates(d1, d2));
+    }
+    
+    @isTest static void testOverThirtyDays() {
+        Date d1 = Date.newInstance(2022, 10, 1);
+        Date d2 = Date.newInstance(2022, 11, 15);
+        
+        System.assertEquals(Date.newInstance(2022, 10, 31), VerifyDate.CheckDates(d1, d2));
+    }
+}
