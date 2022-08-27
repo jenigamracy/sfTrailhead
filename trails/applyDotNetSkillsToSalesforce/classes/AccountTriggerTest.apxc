@@ -1,0 +1,55 @@
+@isTest
+private class AccountTriggerTest {
+    @isTest 
+    static void TestCreateAccountsBulkFieldsMatching() {
+        // Test Setup data
+        // Create 200 new Accounts
+        List<Account> accts = new List<Account>();
+        for(Integer i=0; i < 200; i++) {
+            accts.add(
+                new Account(
+                    Name='Test Account ' + i,
+                    BillingState = 'CA'
+                )
+            );
+        }              
+        // Perform Test
+        Test.startTest();
+        insert accts;                               
+        Test.stopTest();
+        
+        // Verify that 200 new Accounts were inserted
+        List<Account> verifyAccts = [SELECT Id, BillingState, ShippingState FROM Account];
+        System.assertEquals(200, verifyAccts.size());
+        
+        for (Account v : verifyAccts) {
+            System.assertEquals('CA', v.ShippingState);
+        }
+    }
+    
+    @isTest
+    static void TestCreateAccountsBulkFieldsNotMatching() {
+        // Test Setup data
+        // Create 200 new Accounts
+        List<Account> accts = new List<Account>();
+        for(Integer i=0; i < 1; i++) {
+            accts.add(
+                new Account(
+                    Name='Test Account ' + i,
+                    BillingState = 'CA',
+                    ShippingState = 'AC'
+                )
+            );
+        }              
+        // Perform Test
+        Test.startTest();
+        insert accts;                               
+        Test.stopTest();      
+        
+        // Verify that 200 new Accounts were inserted
+        List<Account> verifyAccts = [SELECT Id, BillingState, ShippingState FROM Account];
+        System.assertEquals(1, verifyAccts.size());
+        
+        System.assertEquals('CA', verifyAccts[0].ShippingState);
+    }
+}
