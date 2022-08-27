@@ -1,0 +1,27 @@
+public class AnimalLocator {
+    public static String getAnimalNameById(Integer index) {
+        String animalName = '';
+
+        Http http = new Http();
+        HttpRequest request = new HttpRequest();
+        request.setEndpoint('https://th-apex-http-callout.herokuapp.com/animals/' + index);
+        request.setMethod('GET');
+        HttpResponse response = http.send(request);
+        
+        // If the request is successful, parse the JSON response.
+        if(response.getStatusCode() == 200) {
+            // Deserializes the JSON string into collections of primitive data types.
+            Map<String, Object> results = (Map<String, Object>) JSON.deserializeUntyped(response.getBody());
+            
+            // An animal object should've been returned
+    		Object animal = (Object) results.get('animal');
+            
+            // The object above would be a map of data
+    		Map<String, Object> actualAnimalData = (Map<String, Object>) animal;
+            
+            animalName = (String) actualAnimalData.get('name');
+        }
+        
+        return animalName;
+    }
+}

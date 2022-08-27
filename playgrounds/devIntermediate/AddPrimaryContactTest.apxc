@@ -1,0 +1,40 @@
+@isTest
+private class AddPrimaryContactTest {
+	@testSetup
+    private static void setup() {
+        List<Account> accts = new List<Account>();
+        
+        for (Integer i = 0; i < 50; i++) {
+            accts.add(createAccount('NY', i));
+            accts.add(createAccount('CA', i));
+        }
+        
+        insert accts;
+    }
+    
+    private static Account createAccount(String billingState, Integer suffix) {
+        return new Account(Name = 'Test ' + billingState + ' Account ' + suffix, BillingState = billingState);
+    }
+    
+    @isTest
+    private static void testQueueable() {
+        // Create a contact to attach accounts to
+        Contact c = new Contact(LastName = 'Queueable');
+        insert c;
+       
+        // Create our Queuable instance
+        AddPrimaryContact apc = new AddPrimaryContact(c, 'CA');
+        
+        // Start and stop the test
+        Test.startTest();
+        System.enqueueJob(apc);
+        Test.stopTest();
+        
+        // Validate the job ran
+        List<Account> updatedAccounts = [SELECT ID, (SELECT ID from Contacts) FROM Account WHERE BillingState = 'CA'];
+        System.assertEquals(50, updatedAccounts.size());
+        for (Account ua : updatedAccounts) {
+            System.assertEquals(1, ua.Contacts.size());
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@isTest
+public class AccountManagerTest {
+    @isTest
+    public static void testGetAccountContacts() {
+        // Set up test data
+        Account newAcct = new Account(Name = 'AccountManagerTest Account');
+        insert newAcct;
+        
+        List<Contact> contacts = new List<Contact>();
+        for (Integer i = 0; i < 10; i++) {
+        	contacts.add(new Contact(LastName = 'TestContact' + i, AccountId = newAcct.ID));
+        }
+        insert contacts;
+        
+        // Set up a test request
+        RestRequest request = new RestRequest();
+        request.requestUri = 'https://resourceful-moose-q2f88a-dev-ed.my.salesforce.com/services/apexrest/Accounts/' + newAcct.ID + '/contacts';
+        request.httpMethod = 'GET';
+        RestContext.request = request;
+        
+        // Call the method to test
+        Account actual = AccountManager.getAccount();
+        // Verify results
+        System.assert(actual != null);
+        System.assertEquals(newAcct.Name, actual.Name);
+        System.assertEquals(contacts.size(), actual.Contacts.size());
+    }
+}
