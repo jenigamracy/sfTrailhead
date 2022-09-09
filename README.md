@@ -10,7 +10,10 @@ need to re-do any module-work in the future.
 This folder contains the work done in modules as well as their challenges, if applicable. 
 
 Contents in modules/
+- [auraComponentsBasics](https://trailhead.salesforce.com/content/learn/modules/lex_dev_lc_basics)
 - [jsSkills4SfDevs](https://trailhead.salesforce.com/content/learn/modules/javascript-essentials-salesforce-developers)
+- [lightningExperienceCustomization](https://trailhead.salesforce.com/en/content/learn/modules/lex_customization)
+- [modernJsDevelopment](https://trailhead.salesforce.com/en/content/learn/modules/modern-javascript-development)
 - [orgDevelopmentModel/](https://trailhead.salesforce.com/content/learn/modules/org-development-model)
 
 # playgrounds/
@@ -29,6 +32,13 @@ This folder contains work in projects found in Trailhead
 
 Contents in projects/
 - [findAndFixBugsInApexReplayDebugger](https://trailhead.salesforce.com/content/learn/projects/find-and-fix-bugs-with-apex-replay-debugger)
+- [qsAuraComponents](https://trailhead.salesforce.com/content/learn/projects/quickstart-lightning-components)
 
 # superbadges
 This repository does not include work completed for superbadges.
+
+# trails/
+This folder contains work in trails found in Trailhead
+
+Contents in trails/
+- [applyDotNetSkillsToSalesforce](https://trailhead.salesforce.com/content/learn/trails/microsoft_dotnet)
