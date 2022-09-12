@@ -1,0 +1,4 @@
+<aura:component implements="force:appHostable">
+    <c:helloHeading/>
+	<p>Hello Lightning!</p>
+</aura:component>
