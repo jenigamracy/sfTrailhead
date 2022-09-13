@@ -1,3 +1,6 @@
 <aura:component >
+    <c:unit5Challenge/>
+    
+    <br/><br/>
     <c:unit5ModuleWork/>
 </aura:component>
