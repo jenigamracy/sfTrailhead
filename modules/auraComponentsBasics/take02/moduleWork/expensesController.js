@@ -1,5 +1,6 @@
 ({    
     handleCreateExpense: function(component, event, helper) {
+        console.log('expensesController.handleCreateExpense');
         let newExpense = event.getParam("expense");
         helper.createExpense(component, newExpense);
     },   

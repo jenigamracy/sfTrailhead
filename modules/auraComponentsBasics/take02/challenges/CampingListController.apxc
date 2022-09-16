@@ -11,7 +11,10 @@ public with sharing class CampingListController {
     
     @AuraEnabled
     public static Camping_Item__c saveItem(Camping_Item__c newItem) {
+        System.debug('helllllllllllllloooooooooooooooooo');
+        System.debug(newItem);
         insert newItem;
+        System.debug('finished insert');
         return newItem;
     }
 }

@@ -1,5 +1,6 @@
 ({
     clickCreate: function(component, event, helper) {
+        console.log('expenseFormController.clickCreate');
         let validExpense = component.find('expenseform').reduce(function (validSoFar, inputCmp) {
             // Displays error messages for invalid fields
             inputCmp.showHelpMessageIfInvalid();

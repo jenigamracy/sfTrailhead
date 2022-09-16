@@ -1,5 +1,6 @@
 ({
     createExpense: function(component, expense) {
+        console.log('expensesHelper.createExpense');
         this.saveExpense(component, expense, function(response){
             let state = response.getState();
             if (state === "SUCCESS") {

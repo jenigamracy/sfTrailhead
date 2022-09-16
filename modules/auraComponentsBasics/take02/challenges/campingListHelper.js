@@ -1,5 +1,6 @@
 ({
     createItem : function(component, newItem) {
+        console.log('campingListHelper.createItem');
         let action = component.get("c.saveItem");
         action.setParams({
             "newItem": newItem
