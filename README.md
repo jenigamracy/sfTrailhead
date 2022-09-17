@@ -11,10 +11,12 @@ This folder contains the work done in modules as well as their challenges, if ap
 
 Contents in modules/
 - [auraComponentsBasics](https://trailhead.salesforce.com/content/learn/modules/lex_dev_lc_basics)
+- [auraComponentsSkillsAndTools](https://trailhead.salesforce.com/content/learn/modules/lex_dev_lc_vf_fundamentals)
 - [jsSkills4SfDevs](https://trailhead.salesforce.com/content/learn/modules/javascript-essentials-salesforce-developers)
 - [lightningExperienceCustomization](https://trailhead.salesforce.com/en/content/learn/modules/lex_customization)
 - [modernJsDevelopment](https://trailhead.salesforce.com/en/content/learn/modules/modern-javascript-development)
 - [orgDevelopmentModel/](https://trailhead.salesforce.com/content/learn/modules/org-development-model)
+- [setUpLwcDevTools/](https://trailhead.salesforce.com/content/learn/projects/set-up-your-lightning-web-components-developer-tools)
 
 # playgrounds/
 This folder contains the work in the modules as well as their challenges.
