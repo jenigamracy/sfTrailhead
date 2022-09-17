@@ -14,6 +14,7 @@ Contents in modules/
 - [auraComponentsSkillsAndTools](https://trailhead.salesforce.com/content/learn/modules/lex_dev_lc_vf_fundamentals)
 - [jsSkills4SfDevs](https://trailhead.salesforce.com/content/learn/modules/javascript-essentials-salesforce-developers)
 - [lightningExperienceCustomization](https://trailhead.salesforce.com/en/content/learn/modules/lex_customization)
+- [lwcBasics](https://trailhead.salesforce.com/content/learn/modules/lightning-web-components-basics)
 - [modernJsDevelopment](https://trailhead.salesforce.com/en/content/learn/modules/modern-javascript-development)
 - [orgDevelopmentModel/](https://trailhead.salesforce.com/content/learn/modules/org-development-model)
 - [setUpLwcDevTools/](https://trailhead.salesforce.com/content/learn/projects/set-up-your-lightning-web-components-developer-tools)
