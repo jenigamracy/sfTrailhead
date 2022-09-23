@@ -1,24 +1,18 @@
-import { LightningElement, api } from 'lwc';
-import { bikes } from 'c/data';
-
-
-export default class Detail extends LightningElement {
-
-    // Ensure changes are reactive when product is updated
-    product;
-
-    // Private var to track @api productId
-    _productId = undefined;
-
-    // Use set and get to process the value every time it's
-    // requested while switching between products
-    set productId(value) {
-        this._productId = value;
-        this.product = bikes.find(bike => bike.fields.Id.value === value);
+import { LightningElement, wire } from 'lwc';
+import { getRecord, getFieldValue } from 'lightning/uiRecordApi';
+import Id from '@salesforce/user/Id';
+import NAME_FIELD from '@salesforce/schema/User.Name';
+const fields = [NAME_FIELD];
+export default class Selector extends LightningElement {
+    selectedProductId;
+    handleProductSelected(evt) {
+        this.selectedProductId = evt.detail;
     }
-    
-    // getter for productId
-    @api get productId(){
-        return this._productId;
+    userId = Id;
+    @wire(getRecord, { recordId: '$userId', fields })
+    user;
+    get name() {
+        console.log(this.user.data);
+        return getFieldValue(this.user.data, NAME_FIELD);
     }
 }
